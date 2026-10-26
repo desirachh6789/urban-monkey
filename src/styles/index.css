@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #08090B;
+    color: #F4F4F2;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar for cyberpunk / architectural styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #08090B;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #232733;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4FF00;
+  }
+}
+
+@layer utilities {
+  .text-glow-lime {
+    text-shadow: 0 0 20px rgba(212, 255, 0, 0.45);
+  }
+
+  .border-hairline {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .bg-noise {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .glass-panel {
+    background: rgba(18, 20, 26, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
